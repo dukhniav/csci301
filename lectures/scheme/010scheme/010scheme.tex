@@ -452,6 +452,13 @@ $x, f(x), f(f(x)), f(f(f(x))), \ldots$
 
 \end{frame}
 \sect{Procedures as Returned Values}
+\begin{alltt}
+(define make-adder
+  (lambda (n)
+    (lambda (m) (+ m n))))
+\end{alltt}
+\end{frame}
+\sect{Procedures as Returned Values}
 
 \begin{alltt}
 (define average-damp 

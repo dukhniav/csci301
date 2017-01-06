@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.31)  5 JAN 2017 16:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.31)  6 JAN 2017 15:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -361,25 +361,25 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4]
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 1 on input line 424.
+(longtable)                in table 1 on input line 425.
 
 
 Package longtable Warning: Table widths have changed. Rerun LaTeX.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 428.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 429.
 [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 428.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 429.
  (./syllabus.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 428.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 428.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 429.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 429.
 Package rerunfilecheck Info: File `syllabus.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 428.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 429.
  ) 
 Here is how much of TeX's memory you used:
  6127 strings out of 494910
  91344 string characters out of 6179836
- 189571 words of memory out of 5000000
+ 189606 words of memory out of 5000000
  9393 multiletter control sequences out of 15000+600000
  5672 words of font info for 21 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
@@ -391,7 +391,7 @@ ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on syllabus.pdf (5 pages, 114620 bytes).
+Output written on syllabus.pdf (5 pages, 114710 bytes).
 PDF statistics:
  121 PDF objects out of 1000 (max. 8388607)
  105 compressed objects within 2 object streams
