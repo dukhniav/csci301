@@ -18,6 +18,10 @@
 \begin{frame}[fragile]\frametitle{#1}
 }
 
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ii}{\item}
+\newcommand{\ei}{\end{itemize}}
+
 
 \title
 {
@@ -41,6 +45,130 @@ Scheme Notes 01
 \begin{frame}
 \titlepage
 \end{frame}
+
+
+
+\sect{Resources}
+\bi
+\ii The software:
+\bi\ii \url{https://racket-lang.org/}\ei
+\ii Texts:
+\bi
+\ii \url{https://mitpress.mit.edu/sicp/}
+\ii \url{http://www.scheme.com/tspl3/}\\ (make sure you use the 3rd
+edition and not the 4th)
+\ii \url{http://ds26gte.github.io/tyscheme/}
+\ei
+\ei
+\end{frame}
+
+
+\sect{Running the textbook examples}
+
+\bi
+\ii Using the racket language is usually best, the examples from
+    {\em The Scheme Programming Language} should run without modification.
+
+ \ii The examples from SICP are a little more idiosyncratic.  Most of
+ them can be run by installing the {\tt sicp} package as in
+ these instructions:\\
+ \url{http://stackoverflow.com/questions/19546115/which-lang-packet-is-proper-for-sicp-in-dr-racket}
+
+ \ei
+\end{frame}
+
+\sect{Every powerful language has}
+
+
+\bi
+\ii primitive expressions: the simplest entities, such as \verb|3| and \verb|+|
+\ii
+means of combination: buidling compound elements from simpler ones such as 
+
+\verb|(+ 3 4)|
+\bi
+\ii In Scheme combinations are always parentheses, with the operator
+first and the operands following.
+\ei
+\ii
+means of abstraction: a way for naming compound elements and then manipulating them as units such as 
+
+\verb|(define pi 3.14159)|
+
+\verb|(define square (lambda (x) (* x x)))|
+\ei
+
+\end{frame}
+
+\sect{The REPL does the following three things:}
+
+\bi
+\ii Reads an expression
+\ii Evaluates it to produce a value
+\ii Prints the value
+\ei
+
+The returned value has a small set of types, including number, boolean and procedure. (Later, we'll see symbol, pair, vector, and promise (stream).)
+
+\end{frame}
+
+
+
+\sect{There are 4 types of expressions:}
+\bi
+\ii Constants: numbers, booleans. Examples: \verb|4 3.141592 #t #f|
+\ii Variables: names for values. We create these using the special form \verb|define|
+\ii Special forms: have special rules for evaluation. In addition, you may not redefine a special form.
+\ii Combinations: \verb|(<operator> <operands>)|. These are sometimes called "function calls" or "procedure applications."
+\ei 
+
+The first two types of expressions (constants and variables) are
+primitive expressions -- they have no parentheses. The second two
+types are called compound expressions -- they have parentheses.
+
+\end{frame}
+
+\sect{Mantras}
+\bi
+\ii Every expression has a value
+\bi\ii(except for errors, infinite loops and the 
+\verb|define| special form)\ei
+\ii To find the value of a combination:
+\bi
+\ii Find values of all subexpressions in any order
+\ii Apply the value of the first to the values of the rest
+\ei
+\ii The value of a \verb|lambda| expression is a procedure
+\ei
+\end{frame}
+
+\sect{Finding the value of a combination}
+\bi
+\ii Find values of all subexpressions in any order
+\ii Apply the value of the first to the values of the rest
+\begin{alltt}
+    (+ (* 2 3) \fbox{(- 8 2)})
+
+    (+ \fbox{(* 2 3)}    6   )
+
+   \fbox{(+    6       6   )}
+
+            12
+\end{alltt}
+\ei
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
 
 \sect{\large Program Evaluation In Lisp}
 
