@@ -12,14 +12,20 @@
 \BOOKMARK [2][]{Outline0.12}{Defining Procedures}{}% 12
 \BOOKMARK [2][]{Outline0.13}{Defining Procedures}{}% 13
 \BOOKMARK [2][]{Outline0.14}{Defining Procedures}{}% 14
-\BOOKMARK [2][]{Outline0.15}{Solving problems}{}% 15
-\BOOKMARK [2][]{Outline0.16}{Newton's Method in Scheme}{}% 16
-\BOOKMARK [2][]{Outline0.17}{Definitions can be nested}{}% 17
-\BOOKMARK [2][]{Outline0.18}{Parameters need not be repeated}{}% 18
-\BOOKMARK [2][]{Outline0.19}{Introducing local functions with letrec }{}% 19
-\BOOKMARK [2][]{Outline0.20}{Procedures as parameters}{}% 20
-\BOOKMARK [2][]{Outline0.21}{Finding fixed points}{}% 21
-\BOOKMARK [2][]{Outline0.22}{Fixed points in scheme:}{}% 22
-\BOOKMARK [2][]{Outline0.23}{Remember Newton's Method?}{}% 23
-\BOOKMARK [2][]{Outline0.24}{Procedures as Returned Values}{}% 24
-\BOOKMARK [2][]{Outline0.25}{Procedures as Returned Values}{}% 25
+\BOOKMARK [2][]{Outline0.15}{Procedures always return a value}{}% 15
+\BOOKMARK [2][]{Outline0.16}{Solving problems}{}% 16
+\BOOKMARK [2][]{Outline0.17}{Newton's Method in Scheme}{}% 17
+\BOOKMARK [2][]{Outline0.18}{Definitions can be nested}{}% 18
+\BOOKMARK [2][]{Outline0.19}{Parameters need not be repeated}{}% 19
+\BOOKMARK [2][]{Outline0.20}{Introducing local functions with letrec }{}% 20
+\BOOKMARK [2][]{Outline0.21}{Procedures as parameters}{}% 21
+\BOOKMARK [2][]{Outline0.22}{Better notation for summations}{}% 22
+\BOOKMARK [2][]{Outline0.23}{Better notation for summations}{}% 23
+\BOOKMARK [2][]{Outline0.24}{We have the same problem with derivatives}{}% 24
+\BOOKMARK [2][]{Outline0.25}{The chain rule}{}% 25
+\BOOKMARK [2][]{Outline0.26}{Finding fixed points}{}% 26
+\BOOKMARK [2][]{Outline0.27}{Fixed points in scheme:}{}% 27
+\BOOKMARK [2][]{Outline0.28}{Remember Newton's Method?}{}% 28
+\BOOKMARK [2][]{Outline0.29}{Procedures as Returned Values}{}% 29
+\BOOKMARK [2][]{Outline0.30}{Procedures as Returned Values}{}% 30
+\BOOKMARK [2][]{Outline0.31}{Procedures as Returned Values}{}% 31

@@ -13,14 +13,20 @@
 \beamer@sectionintoc {12}{Defining Procedures}{13}{0}{12}
 \beamer@sectionintoc {13}{Defining Procedures}{14}{0}{13}
 \beamer@sectionintoc {14}{Defining Procedures}{15}{0}{14}
-\beamer@sectionintoc {15}{Solving problems}{16}{0}{15}
-\beamer@sectionintoc {16}{Newton's Method in Scheme}{17}{0}{16}
-\beamer@sectionintoc {17}{Definitions can be nested}{18}{0}{17}
-\beamer@sectionintoc {18}{Parameters need not be repeated}{19}{0}{18}
-\beamer@sectionintoc {19}{Introducing local functions with {\tt letrec} }{20}{0}{19}
-\beamer@sectionintoc {20}{Procedures as parameters}{21}{0}{20}
-\beamer@sectionintoc {21}{Finding fixed points}{22}{0}{21}
-\beamer@sectionintoc {22}{Fixed points in scheme:}{23}{0}{22}
-\beamer@sectionintoc {23}{Remember Newton's Method?}{24}{0}{23}
-\beamer@sectionintoc {24}{Procedures as Returned Values}{25}{0}{24}
-\beamer@sectionintoc {25}{Procedures as Returned Values}{26}{0}{25}
+\beamer@sectionintoc {15}{Procedures always return a value}{16}{0}{15}
+\beamer@sectionintoc {16}{Solving problems}{17}{0}{16}
+\beamer@sectionintoc {17}{Newton's Method in Scheme}{18}{0}{17}
+\beamer@sectionintoc {18}{Definitions can be nested}{19}{0}{18}
+\beamer@sectionintoc {19}{Parameters need not be repeated}{20}{0}{19}
+\beamer@sectionintoc {20}{Introducing local functions with {\tt letrec} }{21}{0}{20}
+\beamer@sectionintoc {21}{Procedures as parameters}{22}{0}{21}
+\beamer@sectionintoc {22}{Better notation for summations}{23}{0}{22}
+\beamer@sectionintoc {23}{Better notation for summations}{24}{0}{23}
+\beamer@sectionintoc {24}{We have the same problem with derivatives}{25}{0}{24}
+\beamer@sectionintoc {25}{The chain rule}{26}{0}{25}
+\beamer@sectionintoc {26}{Finding fixed points}{27}{0}{26}
+\beamer@sectionintoc {27}{Fixed points in scheme:}{28}{0}{27}
+\beamer@sectionintoc {28}{Remember Newton's Method?}{29}{0}{28}
+\beamer@sectionintoc {29}{Procedures as Returned Values}{30}{0}{29}
+\beamer@sectionintoc {30}{Procedures as Returned Values}{31}{0}{30}
+\beamer@sectionintoc {31}{Procedures as Returned Values}{32}{0}{31}
