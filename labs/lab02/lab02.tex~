@@ -1,0 +1,117 @@
+\documentclass{article}
+\pagestyle{empty}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{fancyvrb}
+\usepackage{amsmath}
+\usepackage{multicol}
+
+\begin{document}
+
+\centerline{\Large CSCI 301, Lab \# 2}
+\centerline{\large Spring 2015}
+\begin{multicols}{2}
+
+\begin{description}
+\item[Due:] Your program, named {\tt lab02.rkt}, must be submitted to
+  Canvas before midnight, Tuesday, January 24.
+
+\item[Background:] An infinite {\em continued fraction} is an expression
+of the form
+\[
+f = \cfrac{n_1}{d_1 + \cfrac{n_2}{d_2 + \cfrac{n_3}{d_3 + \ddots}}}
+\]
+Where $n_i$ and $d_i$ are functions of the index, $i$.
+For example, if $n_1=1$ and $d_1=1$ for all $i$, then we get an
+expression equal to the reciprocal of the golden ratio:
+\[
+{\phi^{-1}} = \cfrac{1}{1 + \cfrac{1}{1 + \cfrac{1}{1 + \ddots}}}
+\]
+One way to approximate an infinite continued fraction is to truncate
+the expansion after a given number of terms, giving a 
+{\em k-term finite continued fraction}, which has the form:
+
+\[
+f = \cfrac{n_1}{d_1 + \cfrac{n_2}{d_2 + \cfrac{n_3}{\ddots + \cfrac{n_k}{d_k}}}}
+\]
+
+
+\item[Programming:]\mbox{}
+
+\begin{enumerate}
+\item
+Suppose that {\tt n} and {\tt d} are procedures of one argument 
+(the term index $i$) that return the $n_i$ and $d_i$ of the terms of
+the continued fraction.  Define a procedure {\tt cont-frac} such that
+evaluating {\tt (cont-frac n d k)} computes the value of the $k$-term
+finite continued fraction.
+\item Now test your continued fraction implementation with several
+  famous continued fractions:
+\begin{enumerate}
+\item Find $\phi$, which is approximately 1.61803398875, but you don't
+  have to find that many digits.
+
+ The main function call for this could look like:
+  \begin{verbatim}
+(cont-frac (lambda (x) 1.0)
+           (lambda (x) 1.0)
+           100)
+\end{verbatim}
+  Then take the reciprocal and compare it to the golden ratio.
+
+\item
+In 1737 Leonhard Euler showed that $e-2$
+was equal to the continued fraction where all the numerators, $n_i$ were 1
+and the denominators, $d_i$ were $1,2,1,1,4,1,1,6,1,1,8,\ldots$
+Check your continued fraction procedure by using it to approximate $e$.  
+You can find an accurate value of $e$ in
+Scheme with {\tt (exp 1)}.
+
+The main function call for this could look like this,
+  where {\tt eulerd} is a function you'll have to write:
+  \begin{verbatim}
+(cont-frac (lambda (x) 1.0)
+           eulerd
+           100)
+\end{verbatim}
+  Then add 2 and compare it to $e$.
+
+
+\item
+J.H.Lambert showed in 1770 that the tangent function could be computed
+with the continued fraction
+\[
+\tan(x) = \cfrac{x}{1 - \cfrac{x^2}{3 - \cfrac{x^2}{5 - \cfrac{x^2}{7
+        - \ddots}}}}
+\]
+Observe the minus signs, and that the first $x$ is not squared.
+
+Use your continued fraction procedure to 
+write your own approximate tangent procedure, {\tt mytan}, and compare
+your approximations for several angles with Scheme's builtin {\tt tan} 
+function.
+
+ The main function call for this could look like:
+  \begin{verbatim}
+(cont-frac (make-lambert-n x)   
+           lambert-d
+           100)
+\end{verbatim}
+  where {\tt lambert-d} and {\tt make-lambert-n} are functions you'll
+  have to write.  {\tt make-lambert-n} is, of course, a function of
+  a number, $x$, that returns a function of the index, $i$.  The
+  returned function, in turn, will
+  return $x$ if $i=1$ and $x^2$ otherwise.
+
+  Compare the result to $\tan(x)$, for several values of $x$.
+
+\end{enumerate}
+\end{enumerate}
+
+
+\end{description}
+
+
+\end{multicols}
+\end{document}
+
+
