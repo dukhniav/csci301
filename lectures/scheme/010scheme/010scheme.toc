@@ -28,5 +28,6 @@
 \beamer@sectionintoc {27}{Fixed points in scheme:}{28}{0}{27}
 \beamer@sectionintoc {28}{Remember Newton's Method?}{29}{0}{28}
 \beamer@sectionintoc {29}{Procedures as Returned Values}{30}{0}{29}
-\beamer@sectionintoc {30}{Procedures as Returned Values}{31}{0}{30}
-\beamer@sectionintoc {31}{Procedures as Returned Values}{32}{0}{31}
+\beamer@sectionintoc {30}{Procedures as Returned Values: Derivatives}{31}{0}{30}
+\beamer@sectionintoc {31}{Procedures as Returned Values: Procedures as Data}{32}{0}{31}
+\beamer@sectionintoc {32}{Procedures as Returned Values}{33}{0}{32}

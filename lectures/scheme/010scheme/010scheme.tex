@@ -536,10 +536,33 @@ $x, f(x), f(f(x)), f(f(f(x))), \ldots$
 (define make-adder
   (lambda (n)
     (lambda (m) (+ m n))))
+
+
+
+
+
+
+((make-adder 4) 5)
 \end{alltt}
 \end{frame}
 
-\sect{Procedures as Returned Values}
+\sect{Procedures as Returned Values: Derivatives}
+\begin{alltt}
+(define d
+  (lambda (f)
+    (let* ((delta 0.00001)
+           (two-delta (* 2 delta)))
+      (lambda (x)
+        (/ (- (f (+ x delta)) (f (- x delta)))
+           two-delta)))))
+
+
+
+((d (lambda (x) (* x x x)))  5)
+\end{alltt}
+\end{frame}
+
+\sect{Procedures as Returned Values: Procedures as Data}
 \begin{alltt}
 (define make-pair
   (lambda (a b)
