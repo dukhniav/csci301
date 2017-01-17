@@ -16,18 +16,20 @@
 \beamer@sectionintoc {15}{Procedures always return a value}{16}{0}{15}
 \beamer@sectionintoc {16}{Solving problems}{17}{0}{16}
 \beamer@sectionintoc {17}{Newton's Method in Scheme}{18}{0}{17}
-\beamer@sectionintoc {18}{Definitions can be nested}{19}{0}{18}
-\beamer@sectionintoc {19}{Parameters need not be repeated}{20}{0}{19}
-\beamer@sectionintoc {20}{Introducing local functions with {\tt letrec} }{21}{0}{20}
-\beamer@sectionintoc {21}{Procedures as parameters}{22}{0}{21}
-\beamer@sectionintoc {22}{Better notation for summations}{23}{0}{22}
+\beamer@sectionintoc {18}{Newton's Method in Scheme}{19}{0}{18}
+\beamer@sectionintoc {19}{Definitions can be nested}{20}{0}{19}
+\beamer@sectionintoc {20}{Parameters need not be repeated}{21}{0}{20}
+\beamer@sectionintoc {21}{Introducing local functions with {\tt letrec} }{22}{0}{21}
+\beamer@sectionintoc {22}{Procedures as parameters}{23}{0}{22}
 \beamer@sectionintoc {23}{Better notation for summations}{24}{0}{23}
-\beamer@sectionintoc {24}{We have the same problem with derivatives}{25}{0}{24}
-\beamer@sectionintoc {25}{The chain rule}{26}{0}{25}
-\beamer@sectionintoc {26}{Finding fixed points}{27}{0}{26}
-\beamer@sectionintoc {27}{Fixed points in scheme:}{28}{0}{27}
-\beamer@sectionintoc {28}{Remember Newton's Method?}{29}{0}{28}
-\beamer@sectionintoc {29}{Procedures as Returned Values}{30}{0}{29}
-\beamer@sectionintoc {30}{Procedures as Returned Values: Derivatives}{31}{0}{30}
-\beamer@sectionintoc {31}{Procedures as Returned Values: Procedures as Data}{32}{0}{31}
-\beamer@sectionintoc {32}{Procedures as Returned Values}{33}{0}{32}
+\beamer@sectionintoc {24}{Better notation for summations}{25}{0}{24}
+\beamer@sectionintoc {25}{We have the same problem with derivatives}{26}{0}{25}
+\beamer@sectionintoc {26}{The chain rule}{27}{0}{26}
+\beamer@sectionintoc {27}{Finding fixed points}{28}{0}{27}
+\beamer@sectionintoc {28}{Fixed points in scheme:}{29}{0}{28}
+\beamer@sectionintoc {29}{Remember Newton's Method?}{30}{0}{29}
+\beamer@sectionintoc {30}{Procedures as Returned Values}{31}{0}{30}
+\beamer@sectionintoc {31}{Note that this would be more confusing:}{32}{0}{31}
+\beamer@sectionintoc {32}{Procedures as Returned Values: Derivatives}{33}{0}{32}
+\beamer@sectionintoc {33}{Procedures as Returned Values: Procedures as Data}{34}{0}{33}
+\beamer@sectionintoc {34}{Procedures as Returned Values}{35}{0}{34}

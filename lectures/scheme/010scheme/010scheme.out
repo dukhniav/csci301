@@ -15,18 +15,20 @@
 \BOOKMARK [2][]{Outline0.15}{Procedures always return a value}{}% 15
 \BOOKMARK [2][]{Outline0.16}{Solving problems}{}% 16
 \BOOKMARK [2][]{Outline0.17}{Newton's Method in Scheme}{}% 17
-\BOOKMARK [2][]{Outline0.18}{Definitions can be nested}{}% 18
-\BOOKMARK [2][]{Outline0.19}{Parameters need not be repeated}{}% 19
-\BOOKMARK [2][]{Outline0.20}{Introducing local functions with letrec }{}% 20
-\BOOKMARK [2][]{Outline0.21}{Procedures as parameters}{}% 21
-\BOOKMARK [2][]{Outline0.22}{Better notation for summations}{}% 22
+\BOOKMARK [2][]{Outline0.18}{Newton's Method in Scheme}{}% 18
+\BOOKMARK [2][]{Outline0.19}{Definitions can be nested}{}% 19
+\BOOKMARK [2][]{Outline0.20}{Parameters need not be repeated}{}% 20
+\BOOKMARK [2][]{Outline0.21}{Introducing local functions with letrec }{}% 21
+\BOOKMARK [2][]{Outline0.22}{Procedures as parameters}{}% 22
 \BOOKMARK [2][]{Outline0.23}{Better notation for summations}{}% 23
-\BOOKMARK [2][]{Outline0.24}{We have the same problem with derivatives}{}% 24
-\BOOKMARK [2][]{Outline0.25}{The chain rule}{}% 25
-\BOOKMARK [2][]{Outline0.26}{Finding fixed points}{}% 26
-\BOOKMARK [2][]{Outline0.27}{Fixed points in scheme:}{}% 27
-\BOOKMARK [2][]{Outline0.28}{Remember Newton's Method?}{}% 28
-\BOOKMARK [2][]{Outline0.29}{Procedures as Returned Values}{}% 29
-\BOOKMARK [2][]{Outline0.30}{Procedures as Returned Values: Derivatives}{}% 30
-\BOOKMARK [2][]{Outline0.31}{Procedures as Returned Values: Procedures as Data}{}% 31
-\BOOKMARK [2][]{Outline0.32}{Procedures as Returned Values}{}% 32
+\BOOKMARK [2][]{Outline0.24}{Better notation for summations}{}% 24
+\BOOKMARK [2][]{Outline0.25}{We have the same problem with derivatives}{}% 25
+\BOOKMARK [2][]{Outline0.26}{The chain rule}{}% 26
+\BOOKMARK [2][]{Outline0.27}{Finding fixed points}{}% 27
+\BOOKMARK [2][]{Outline0.28}{Fixed points in scheme:}{}% 28
+\BOOKMARK [2][]{Outline0.29}{Remember Newton's Method?}{}% 29
+\BOOKMARK [2][]{Outline0.30}{Procedures as Returned Values}{}% 30
+\BOOKMARK [2][]{Outline0.31}{Note that this would be more confusing:}{}% 31
+\BOOKMARK [2][]{Outline0.32}{Procedures as Returned Values: Derivatives}{}% 32
+\BOOKMARK [2][]{Outline0.33}{Procedures as Returned Values: Procedures as Data}{}% 33
+\BOOKMARK [2][]{Outline0.34}{Procedures as Returned Values}{}% 34
