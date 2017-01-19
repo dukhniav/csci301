@@ -1,0 +1,67 @@
+\documentclass{article}
+\pagestyle{empty}
+%\usepackage[margin=0.75in]{geometry}
+\usepackage{fancyvrb}
+\usepackage{amsmath}
+
+\begin{document}
+
+\centerline{\Large CSCI 301, Lab \# 3}
+\centerline{\large Winter 2017}
+
+
+\begin{description}
+\item[Due:] Your program, named {\tt lab03.rkt}, must be submitted to
+  Canvas before midnight, Tuesday, Jan 31.
+
+\item[Background:]  It's pretty easy to write a procedure to return
+  the shorter of two lists using only {\tt car}, {\tt cdr}
+  and {\tt null?}, if we first compute the length of each.  
+For example, we can use:
+\begin{Verbatim}[frame=single]
+(define length 
+  (lambda (ls) 
+    (if (null? ls) 
+        0 
+        (+ 1 (length (cdr ls))))))
+
+(define shorter
+  (lambda (ls1 ls2)
+    (if (<= (length ls1) (length ls2)) 
+        ls1 
+        ls2)))
+\end{Verbatim}
+Note: {\tt length} is actually builtin to DrRacket, but we show a
+definition here to make a point.
+
+However, this is very inefficient if the lists are vastly different in
+length.  For example, if we had one list with length over a billion,
+and the other with only 5 things in it, this procedure would traverse
+{\em both} lists to the end, only to return the second list.  Clearly
+we could have found out which was shorter by only examining the first
+few of the items in each list.
+
+\item[Programming:] Rewrite the {\tt shorter} procedure, so that it
+  returns the same value as the procedure above, but does not use {\tt
+    length}, and does not traverse both of the lists to the end when
+  one is longer than the other.  You can write as many procedures as
+  you like, but make sure:
+\begin{itemize}
+\item you use only {\tt car}, {\tt cdr} and {\tt null?} as builtin
+  procedures,
+\item your procedure
+returns the shorter input list (or the first if they are the
+  same length),
+\item your procedure does not copy any lists,
+\item traverses the minimum
+  number of items to determine which list is shorter, and
+\item 
+  uses functional style, no assignment statements!
+\end{itemize}
+
+\end{description}
+
+
+\end{document}
+
+\end
