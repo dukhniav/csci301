@@ -55,11 +55,27 @@ k**3/3 + 3*k**2/2 + 13*k/6 + 1
   \frac{k^{3}}{3} + \frac{3 k^{2}}{2} + \frac{13 k}{6} + 1
   \]
 
+  \newpage
+
+
 \item[Example 2.]
   For another example,
-consider the example in {\em the Book of Proof}, p. 155. We need
-to prove that if $k^5 - k = 5a$ for some $a\in\mathbb{Z}$, then
-$(k+1)^5 - (k+1) = 5b$ for some $b\in\mathbb{Z}$.
+consider the example in {\em the Book of Proof}, p.~155. We need
+to prove that if \[k^5 - k = 5a\] for some $a\in\mathbb{Z}$, then
+\[(k+1)^5 - (k+1) = 5b\] for some $b\in\mathbb{Z}$.
+
+We can prove that
+they are both multiples of 5 if we can prove that 
+their difference is, so let's look at the difference:
+\begin{Verbatim}[frame=single]
+>> from sympy import *
+>>> k = symbols('k')
+>>> exp1 = k**5 - k
+>>> exp2 = (k+1)**5 - (k+1) 
+>>> expand(exp2 - exp1)
+5*k**4 + 10*k**3 + 10*k**2 + 5*k
+\end{Verbatim}
+From which we easily get the proof as in the book.  
 
 
 \end{description}
