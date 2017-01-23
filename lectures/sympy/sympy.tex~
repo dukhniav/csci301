@@ -1,0 +1,326 @@
+\documentclass{article}
+\usepackage{amsfonts,amssymb}
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyvrb}
+
+\newcommand{\qed}{\hfill\ensuremath{\blacksquare}}
+\title{CSCI 480, Winter 2017\\Math Exercises \# 2}
+\author{YOUR NAME HERE}
+\date{Due date:  Wednesday, February 1, midnight.}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{description}
+\item[Exercises for Chapter 4]
+Use the method of direct proof to prove the following statements.
+\item[16.] If two integers have the same parity, then their sum is even.
+\begin{description}
+  \item[Proof:]  Suppose $a$ and $b$ have the same parity.
+    \begin{description}
+      \item[Case 1:  both even.]  Then $a=2m$ and $b=2n$ for some
+        $m,n\in\mathbb{Z}$, so their sum $a+b = 2m+2n=2(m+n)$ is even.
+      \item[Case 2:  both odd.]  Then $a=2m+1$ and $b=2n=1$ for some
+        $m,n\in\mathbb{Z}$, so their sum $a+b = 2m+2n+2=2(m+n+1)$ is even.
+    \end{description}
+    In both cases $a+b$ is even. \qed
+\end{description}
+\item[Exercises for Chapter 5]
+Use the method of contrapositive proof to prove the following statements.
+\item[12.]  Suppose $a\in\mathbb{Z}$.  If $a^2$ is not divisible by 4,
+  then $a$ is odd.
+
+  \begin{description}
+  \item[Proof:]
+  Suppose $a$ is not odd.  Then $a$ is even and $a=2m$ for some
+  $m\in\mathbb{Z}$.  Therefore $a^2=4m^2$ and, since
+  $m^2\in\mathbb{Z}$, hence $4\mid a^2$.\qed
+  \end{description}
+  
+
+\item[Exercises for Chapter 6]
+Use the method of proof by contradiction to prove the following statements.
+\item[18.] Suppose $a,b\in\mathbb{Z}$.  If $4\mid (a^2 + b^2)$, then
+  $a$ and $b$ are not both odd.
+
+  \begin{description}
+  \item[Proof:] Suppose $4\mid(a^2+b^2)$ and $a$ and $b$ are both
+    odd. Then, for some $q\in\mathbb{Z}$,
+    \begin{eqnarray*}
+      a^2+b^2 &=& 4q\\
+      &=& 2(2q)
+    \end{eqnarray*}
+    and so $(a^2+b^2)/2 = 2q$ is even.
+    Also, since $a$ and $b$ are both odd,  for some $r,s\in\mathbb{Z}$,
+    \begin{eqnarray*}
+      a &=& 2r+1\\
+      b &=& 2s+1\\
+      a^2 + b^2 &=& (2r+1)^2 + (2s+1)^2\\
+      &=& 4r^2 + 4r + 1 + 4s^2 + 4s + 1\\
+      &=& 4r^2 + 4r + 4s^2 + 4s + 2\\
+      &=& 2(2r^2 + 2r + 2s^2 + 2s + 1)
+    \end{eqnarray*}
+    And so $(a^2+b^2)/2 = 2r^2 + 2r + 2s^2 + 2s + 1$ is odd.
+
+    We have now concluded that $(a^2+b^2)/2$ 
+    is both even and odd, which
+    is a contradiction.\qed
+    
+  \end{description}
+
+\item[Exercises for Chapter 7]
+  State clearly which method of proof you are using.
+\item[24.]  If $a\in\mathbb{Z}$, then $4\nmid (a^2-3)$.
+  \begin{description}
+  \item[Proof by contradiction:]
+    Suppose $a\in\mathbb{Z}$ and $4\mid (a^2-3)$.  Then $a^2-3 = 4k$
+    for some $k\in\mathbb{Z}$.
+    \begin{description}
+      \item[Case 1, $a$ is even:] Then $a=2j$ for some
+        $j\in\mathbb{Z}$, and so
+        \begin{eqnarray*}
+          a^2-3 &=& 4k\\
+          (2j)^2-3 &=& 4k\\
+          4j^2-3 &=& 4k\\
+          (4j^2 - 4) + 1 &=& 4k\\
+          2(2j^2 - 2) + 1 &=& 2(2k)
+        \end{eqnarray*}
+        and so, since $j$ and $k$ are integers,
+        we have an even number equal to an odd number, which is
+        a contradiction.
+      \item[Case 2, $a$ is odd:] Then $a=2\ell+1$ for some
+        $\ell\in\mathbb{Z}$, so
+        \begin{eqnarray*}
+          a^2-3 &=& 4k\\
+          (2\ell+1)^2-3 &=& 4k\\
+          (4\ell^2 + 4\ell + 1) -3  &=& 4k\\
+          4\ell^2 + 4\ell -2  &=& 4k\\
+          2(2\ell^2 + 2\ell - 1) &=& 2(2k)\\
+          2\ell^2 + 2\ell - 1 &=& 2k\\
+          2(\ell^2 + \ell - 1) + 1 &=& 2k
+        \end{eqnarray*}
+        and again, since $k$ and $\ell$ are integers, we have an even
+        number equal to an odd number, which is a contradiction. \qed
+        
+    \end{description}
+  \end{description}
+  
+
+\item[Exercises for Chapter 8]
+\item[20.] Prove that $\{9^n:n\in\mathbb{Q}\}= \{3^n:n\in\mathbb{Q}\}$.  
+  \begin{description}
+    \item[Proof] There are two parts to prove, $\{9^n:n\in\mathbb{Q}\}\subseteq
+      \{3^n:n\in\mathbb{Q}\}$ and
+      $\{3^n:n\in\mathbb{Q}\}\subseteq \{9^n:n\in\mathbb{Q}\}$
+  \begin{description}
+    \item[Part 1.]  Suppose $x\in\{9^n:n\in\mathbb{Q}\}$.  Then
+      $x=9^n$ for some $n\in\mathbb{Q}$. Therefore $x=(3^2)^n =
+      3^{2n}$ and $2n\in\mathbb{Q}$ because $n\in\mathbb{Q}$, so $x\in
+      \{3^n:n\in\mathbb{Q}\}$.
+    \item[Part 2.] Suppose  $x\in\{3^n:n\in\mathbb{Q}\}$.  Then
+      $x=3^n$ for some $n\in\mathbb{Q}$.  Therefore $x=(9^{1/2})^n =
+      9^{n/2}$, and $n/2\in\mathbb{Q}$ since $n\in\mathbb{Q}$, and so $x\in
+      \{9^n:n\in\mathbb{Q}\}$.\qed
+  \end{description}
+  \end{description}
+
+\item[Exercises for Chapter 9]
+  Each of the following statements is either true or false.
+  If a statement is true, prove it.
+  If a statement is false, disprove it.
+\item[18.] If $a,b,c\in\mathbb{N}$, then at least one of $a-b$,
+  $a+c$, and $b-c$ is even.
+
+  \begin{description}
+\item[Proof by contradiction:]  Suppose $a-b$, $a+c$ and $b-c$ are all
+  odd.  Then, for some $p,q,r,\in\mathbb{Z}$,
+  \begin{eqnarray*}
+    a-b &=& 2p+1\\
+    a+c &=& 2q+1\\
+    b-c &=& 2r+1\\ 
+  \end{eqnarray*}
+  adding the first and third gives
+  \begin{eqnarray*}
+    a-c &=& 2p+1+2r+1\\
+    &=& 2(p+r+1)
+  \end{eqnarray*}
+  adding this to the second gives
+  \begin{eqnarray*}
+    2a &=& 2(p+r+1) + 2q + 1\\
+    &=& 2(p+r+q+1) + 1
+  \end{eqnarray*}
+  and since $p,q,r,a\in\mathbb{Z}$, we have a number that is both even
+  and odd, a contradiction.\qed
+  
+  \end{description}
+  
+
+\item[Exercises for Chapter 10]
+  
+\item[2.] For every integer $n\in\mathbb{N}$, it follows that
+  \[
+  \sum_{i=1}^n i^2 = \frac{n(n+1)(2n+1)}{6}
+  \]
+
+  \begin{description}
+  \item[Base:]
+\[
+      1^2 = \frac{1(1+1)(2(1)+1)}{6}= 1
+   \]
+  \item[Step:]
+    Assume  \[
+  \sum_{i=1}^k i^2 = \frac{k(k+1)(2k+1)}{6}
+  \]
+  We need to prove
+\[
+  \sum_{i=1}^{k+1} i^2 = \frac{(k+1)(k+2)(2k+3)}{6}
+  \]
+  Left hand side:
+  \begin{eqnarray*}
+      \sum_{i=1}^{k+1} i^2 &=&       \sum_{i=1}^{k} i^2 + (k+1)^2 \\
+                        &=&    \frac{k(k+1)(2k+1)}{6}    + (k+1)^2 \\
+  &=& 
+      \frac{k^{3}}{3} + \frac{3 k^{2}}{2} + \frac{13 k}{6} + 1
+  \end{eqnarray*}
+  Right hand side:
+  \begin{eqnarray*}
+      \frac{(k+1)(k+2)(2k+3)}{6}
+  &=& 
+      \frac{k^{3}}{3} + \frac{3 k^{2}}{2} + \frac{13 k}{6} + 1
+  \end{eqnarray*}
+  We have now shown that the left hand and right hand sides
+  of the equation we want to prove are equal to each other.
+  Consequently, the implication is true and the theorem is proved.
+  \qed
+
+\item[Note on Sympy:]  Those last two algebra problems were kind of nasty.
+  You may want to familiarize yourself with symbolic algebra packages,
+  such as the {\bf Sympy} package which runs in python.  The following
+  session allowed me to simplify those expressions above with no pain,
+  and even formatted them in \LaTeX\ for me:
+  \begin{Verbatim}[frame=single]
+>>> import sympy
+>>> k = sympy.symbols('k')
+>>> exp1 = k*(k+1)*(2*k+1)/6 + (k+1)**2
+>>> sympy.expand(exp1)
+k**3/3 + 3*k**2/2 + 13*k/6 + 1
+>>> exp2 = (k+1)*((k+1)+1)*(2*(k+1) +1)/6
+>>> sympy.expand(exp2)
+k**3/3 + 3*k**2/2 + 13*k/6 + 1
+>>> print(sympy.latex(sympy.expand(exp1)))
+\frac{k^{3}}{3} + \frac{3 k^{2}}{2} + \frac{13 k}{6} + 1
+>>> print(sympy.latex(sympy.expand(exp2)))
+\frac{k^{3}}{3} + \frac{3 k^{2}}{2} + \frac{13 k}{6} + 1
+\end{Verbatim}
+
+  
+  \end{description}
+
+\item[6.] For every natural number $n$, it follows that
+  \[
+  \sum_{i=1}^{n}(8i-5) = 4n^2 - n
+  \]
+
+  \begin{description}
+  \item[Base:]
+\[8(1)-5 = 3 = 4(1^2)-1\]
+\item[Step:]
+  Assume
+  \[
+  \sum_{i=1}^{k}(8i-5) = 4k^2 - k
+  \]
+  We need to prove
+  \[
+  \sum_{i=1}^{k+1}(8i-5) = 4(k+1)^2 - (k+1)
+  \]
+
+Left hand side:
+\begin{eqnarray*}
+    \sum_{i=1}^{k+1}(8i-5) &=&     \sum_{i=1}^{k}(8i-5) + 8(k+1)-5\\
+&=& 4k^2 - k+ 8(k+1)-5\\
+&=& 4k^2 -7k + 3
+\end{eqnarray*}
+Right hand side:
+\begin{eqnarray*}
+   4(k+1)^2 - (k+1) &=& 4k^2 + 8k + 4 - k - 1\\
+&=& 4k^2 -7k + 3
+    \end{eqnarray*}
+  \end{description}\qed
+  
+
+\item[10.] For every integer $n\geq 0$, it follows that $3\mid (5^{2n} - 1)$.
+
+
+  \begin{description}
+  \item[Base:]
+$5^2(0) - 1 = 1-1 = 0$ and $3\mid 0$.
+  \item[Step:]
+    Assume $3\mid 5^{2k}-1$, in other words $5^{2k}-1 = 3a$ for some
+    $a\in\mathbb{Z}$.
+
+    We need to show that $3\mid 5^{2(k+1)}-1$, in other words
+    $5^{2(k+1)}-1 = 3b$ for some $b\in\mathbb{Z}$.
+    \begin{eqnarray*}
+      5^{2(k+1)}-1  &=& 25(5^{2k}) - 1\\
+      &=& 25(5^{2k} - 1) + 25 - 1\\
+      &=& 25(5^{2k} - 1) + 24\\
+      &=& 25(3a) + 24\\
+      &=& 3(25a + 8)
+    \end{eqnarray*}
+    and so, since $25a+8$ is an integer, we let $b = 25a+8$, also an
+    integer, and so $5^{2(k+1)}-1 = 3b$ which means $3\mid 5^{2(k+1)}-1
+    $.
+  \end{description}\qed
+
+\item[14.]
+ Suppose $a\in\mathbb{Z}$.  Prove that $5\mid 2^na$ implies
+  $5\mid a$ for any $n\in\mathbb{N}$.
+
+  \begin{description}
+  \item[Note:] For this  problem, we use a small lemma, which
+    should be obvious but we will prove it nevertheless.
+    \begin{description}
+    \item[Lemma:] If $a,b\in\mathbb{Z}$ and $2a=5b$ then $b$ is even.
+    \item[Proof of lemma:]  Suppose $b$ is odd and $b = 2c+1$.  Then
+      $2a=5(2c+1) = 10c + 5 = (10c + 4) + 1 = 2(5c+2) + 1$ and we have
+      a number which is both even and odd, which is a contradiciton.
+    \end{description}\qed
+\item[Proof of theorem:] 
+  \item[Base:]  We need to prove: $(5\mid 2^1a)\Rightarrow(5\mid a)$,
+    or $(5\mid 2a)\Rightarrow(5\mid a)$.
+
+    Assume $5\mid 2a$.  Then $2a = 5k$ for some $k\in\mathbb{Z}$.
+    This implies that $k$ must be even (by the lemma),
+    so $2a = 5k = 5(2j)$, which
+    means $a=5j$ and so $5\mid a$.
+
+  \item[Step:]  Assume: $(5\mid 2^ka) \Rightarrow (5\mid a)$.  This is
+    the {\bf inductive hypothesis}.
+
+    We need to prove: $(5\mid 2^{k+1}a) \Rightarrow (5\mid a)$.
+
+    Assume $5\mid 2^{k+1}a$.  This is an {\bf assumption for a conditional
+    proof}. 
+
+    This means that $2^{k+1}a = 5j$ for some $j\in\mathbb{Z}$.
+
+    Since $2^{k+1}a = 2(2^k)a = 5j$, this implies that $j$ is even (by
+    the lemma), and so $2^{k+1}a = 5(2k)$.
+
+    But this implies that $2^{k+1}a  = 2(2^ka)= 5(2k)$, and so $2^ka =
+    5k$, and so $5\mid 2^ka$.
+
+    By our inductive hypothesis, if $5\mid 2^ka$
+    we can then conclude that $5 \mid a$.
+
+    This concludes the conditional
+    proof, so we can conclude $(5\mid 2^{k+1}a) \Rightarrow (5\mid a)$.
+    \qed
+  \end{description}
+
+\end{description}
+
+
+\end{document}

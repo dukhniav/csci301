@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage{amsfonts,amssymb}
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyvrb}
+
+\newcommand{\qed}{\hfill\ensuremath{\blacksquare}}
+\title{Sympy}
+\author{Geoffrey Matthews}
+
+
+\begin{document}
+
+\maketitle
+
+
+  You may want to familiarize yourself with symbolic algebra packages,
+  such as the {\bf Sympy} package which runs in python.  The following
+  session allowed me to simplify two complex expressions
+  and prove they were identical.
+
+  I had derived this expression:
+  \[
+  \frac{k \left(k + 1\right) \left(2 k + 1\right)}{6} + \left(k + 1\right)^{2}
+  \]
+  And another expression I derived:
+  \[
+\frac{1 \left(k + 1\right) \left(k + 2\right) \left(2 k + 3\right)}{6}
+\]
+And I wanted to show that these were equal.
+
+Sympy to the rescue!  
+  Sympy even formatted them in \LaTeX\ for me:
+  \begin{Verbatim}[frame=single]
+>>> import sympy
+>>> k = sympy.symbols('k')
+>>> exp1 = k*(k+1)*(2*k+1)/6 + (k+1)**2
+>>> print(sympy.latex(exp1))
+\frac{k}{6} \left(k + 1\right) \left(2 k + 1\right) + \left(k + 1\right)^{2}
+>>> exp2 = (k+1)*((k+1)+1)*(2*(k+1)+1)/6
+>>> print(sympy.latex(exp2))
+\frac{1}{6} \left(k + 1\right) \left(k + 2\right) \left(2 k + 3\right)
+>>> sympy.expand(exp1)
+k**3/3 + 3*k**2/2 + 13*k/6 + 1
+>>> print(sympy.latex(sympy.expand(exp1)))
+\frac{k^{3}}{3} + \frac{3 k^{2}}{2} + \frac{13 k}{6} + 1
+>>> sympy.expand(exp2)
+k**3/3 + 3*k**2/2 + 13*k/6 + 1
+>>> print(sympy.latex(sympy.expand(exp2)))
+\frac{k^{3}}{3} + \frac{3 k^{2}}{2} + \frac{13 k}{6} + 1
+>>> 
+ \end{Verbatim}
+  Thus I knew that both expressions were equal to
+  \[
+  \frac{k^{3}}{3} + \frac{3 k^{2}}{2} + \frac{13 k}{6} + 1
+  \]
+
+
+\end{document}
