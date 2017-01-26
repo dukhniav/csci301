@@ -1,0 +1,65 @@
+\documentclass{article}
+\pagestyle{empty}
+%\usepackage[margin=0.75in]{geometry}
+\usepackage{fancyvrb}
+\usepackage{amsmath}
+
+\begin{document}
+
+\centerline{\Large CSCI 301, Lab \# 4}
+\centerline{\large `Winter, 2017}
+
+
+\begin{description}
+\item[Due:] Your program, named {\tt lab04.rkt}, must be submitted to
+  Canvas before midnight, Tuesday, February 7.
+
+\item[Composition:]  Let $f$ and $g$ be two one-argument functions.
+  The {\em composition} $f$ after $g$, written $f\circ g$, is 
+  defined as $(f\circ g)(x) = f(g(x))$.
+\begin{description}
+\item[Programming composition:]
+Define a procedure {\tt compose} that implements composition.  For
+example:
+\begin{Verbatim}
+((compose square add1) 5) => 36
+((compose add1 square) 5) => 26
+\end{Verbatim}
+\end{description}
+
+\item[Repeated application:]  If $f$ is a numerical function and $n$ is
+a non-negative integer, then we can form the $n$th repeated
+application of $f$, which is defined to be the function whose value at
+$x$ is $f(f(\ldots(f(x))\ldots))$, where $f$ is repeated $n$ times.
+There seems to be no standard notation for this, but $f^{\circ n}(x)$
+is popular.
+
+For example, if $f$ is the function $f(x) = x+1$ then the $n$th
+repeated application of $f$ is the function $f^{\circ n}(x)= x+n$.  If $f$ is
+the operation of squaring a number, then the $n$th repeated
+application of $f$ is the function that raises its argument to the
+$2^n$th power.  
+\begin{description}
+\item[Programming repeated application:] 
+Using {\tt compose} from the previous problem,
+write a procedure that takes as inputs a procedure
+that computes $f$ and a positive integer $n$ and returns the procedure
+that computes the $n$th repeated application of $f$.  Your procedure
+should be able to be used as follows:
+\begin{Verbatim}
+((repeated square 2) 5)  => 625
+((repeated square 3) 5) => 390625
+((repeated add1 50) 50) => 100
+\end{Verbatim}
+
+\item[Recursive and iterative:]
+Write both a recursive and an iterative version of the {\tt repeated}
+procedure.  The iterative version should use a tail-recursive function.
+
+\end{description}
+\end{description}
+
+
+\end{document}
+
+\end
