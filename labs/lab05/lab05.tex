@@ -1,0 +1,83 @@
+\documentclass{article}
+\pagestyle{empty}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{fancyvrb}
+\usepackage{amsmath}
+
+\begin{document}
+
+\centerline{\Large CSCI 301, Lab \# 5}
+\centerline{\large `Winter, 2017}
+
+
+\begin{description}
+\item[Due:] Your program, named {\tt lab05.rkt}, must be submitted to
+  Canvas before midnight, Tuesday, February 21.
+
+\item[Pig Latin (from Wikipedia):] Pig Latin is a language game in
+  which words in English are altered. The objective is to conceal the
+  words from others not familiar with the rules.  For words that begin
+  with consonants, all letters before the initial vowel are
+  placed at the end of the word sequence. Then, ``ay'' is added, as in
+  the following examples:
+\begin{itemize}
+\item ``pig'' = ``igpay''
+\item ``latin'' = ``atinlay''
+\item ``banana'' = ``ananabay''
+\item ``trash'' = ``ashtray''
+\item ``duck'' = ``uckday''
+\item ``glove'' = ``oveglay''
+\item ``too'' = ``ootay''
+\item ``thanks'' = ``anksthay''
+\item ``cheers'' = ``eerschay''
+\end{itemize}
+For words that begin with vowels, one just adds ``way'' to the
+end. Examples are: 
+\begin{itemize}
+\item   ``eat'' = ``eatway''
+\item ``omelet'' = ``omeletway''
+\item ``are'' = ``areway''
+\item ``egg'' = ``eggway''
+\end{itemize}
+For purposes of this assignment, we will consider only letters in the
+set $\{a,e,i,o,u\}$ to be vowels.  We will also assume that every word
+has at least one vowel in it.
+
+\item[Program:]\mbox{}
+
+    Write a program to translate a string of text into
+  pig latin.  To simplify this first attempt, assume all punctuation
+  has been removed and all letters are lowercase, for example:
+  \begin{verbatim}
+> (piglatin  "hello there you gorgeous thing are you busy tonight")
+"ellohay erethay ouyay orgeousgay ingthay areyay ouyay usybay onighttay"
+\end{verbatim}
+
+  A few utility functions from the standard racket library (no extra
+  modules need be loaded) that you can use:\\
+{  \tt string->list \hfill list->string \hfill string-join \hfill
+  string-split }\\
+Look up their documentation in the Racket help system.
+
+Using these will allow you to use list processing instead of string
+processing (which is much messier).
+
+{\bf Do not do string
+  processing!}
+
+First turn the string into a list of words, then turn each word into a
+list of characters, convert these lists into piglatin lists of
+characters, then turn the characters back to a word string, and
+finally join the word strings into a single string.
+
+Feel free to use list processing procedures, such as:\\
+{\tt cons \hfill car \hfill cdr \hfill append \hfill map \hfill member }\\
+Look up their documentation in the Racket help system.
+
+
+\end{description}
+
+
+\end{document}
+
+\end
