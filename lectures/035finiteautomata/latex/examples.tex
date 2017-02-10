@@ -64,6 +64,39 @@ Bend right and bend left automatically curve the arrows.
 In the above picture, the arrows between 010 and 101 had to be
 squeezed in tightly, hence the specification of in and out angles.
 
+The same picture done with a matrix layout for the nodes:
+
+\begin{tikzpicture}[->,>=stealth',auto,thick]
+\matrix[row sep = 2cm, column sep=2cm]{
+  \node[initial,state]   (000)    {$q_{000}$}; &
+  \node[state,accepting] (100)    {$q_{100}$}; &
+  \node[state]           (010)    {$q_{010}$}; &
+  \node[state,accepting] (110)    {$q_{110}$}; \\
+  \node[state]           (001)    {$q_{001}$}; &
+  \node[state,accepting] (101)    {$q_{101}$}; &
+  \node[state]           (011)    {$q_{011}$}; &
+  \node[state,accepting] (111)    {$q_{111}$}; \\
+  };
+
+  \path (000) edge [loop above]     node         {0} (000)
+              edge                  node         {1} (001)
+        (100) edge                  node         {0} (000)
+              edge                  node         {1} (001)
+        (010) edge                  node         {0} (100)
+              edge [out=-130,in=40] node [right] {1} (101)
+        (110) edge [bend right]     node [above] {0} (100)
+              edge                  node         {1} (101)
+        (001) edge                  node         {0} (010)
+              edge [bend right]     node [below] {1} (011)
+        (101) edge [out=50,in=-140] node [left]  {0} (010)
+              edge                  node         {1} (011)
+        (011) edge                  node         {0} (110)
+              edge                  node         {1} (111)
+        (111) edge                  node         {0} (110)
+              edge [loop below]     node         {1} (111);
+
+\end{tikzpicture}
+
 \section{Martin Thoma examples}
 
 Examples on a web page I found:
