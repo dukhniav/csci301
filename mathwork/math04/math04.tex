@@ -36,23 +36,19 @@ documents.
 \item
   \label{langfirst}
   The language $\{100, 10, 011\}$.
-
   Regular expression: 
 
 \item   The language $\{100, 10, 011\}$.
-
   DFA:
     
 
 \item The set of 
   all strings that begin or end with a doubled digit, either 11 or 00.
-
   Regular expression:
 
   
 \item The set of 
   all strings that begin or end with a doubled digit, either 11 or 00.
-
   DFA:
 
   
@@ -60,44 +56,25 @@ documents.
 The set of all strings that have exactly one doubled digit in them.
   In other words, either 11 or 00 occurs in the string, but not both,
   and it only occurs once.
-
   Regular expression:
   
 
-\item
+\item \label{langlast}
 The set of all strings that have exactly one doubled digit in them.
   In other words, either 11 or 00 occurs in the string, but not both,
   and it only occurs once.
-
 DFA:
 
+\item Use the pumping lemma to show that the language that consists of
+  all {\em palindromes} over $\Sigma=\{0,1\}$ is not regular.  A palindrome
+  is a string that reads the same backwards and forwards, for example
+  11011, 01010, 0, and 0110.
+  \[ L = \{w \in \{0,1\}^* \mid w = w^R\}\]
 
-\item The set of all strings such that every block of three consecutive
-  digits has at least two 0's in it.  Note that we have to accept
-  everything with less than three digits, such as 11 and 01.
-
-  Hint:  you may want to break the machine up into two parts, one for
-  the first few letters and another for the rest, and then specify the
-  complete machine as the union of the two machines.
-
-  DFA:
-
-
-\item \label{langlast} The set of all strings beginning with a 1 such
-  that, interpreted as a binary representation of an integer, it has a
-  remainder of 1 when divided by 3.  For example, the binary number
-  $1010_b$ is decimal $10$.  When you divide 10 by 3 you get a
-  remainder of 1, so $1010$ is in the language.  However, the binary
-  number $1111_b$ is decimal $15$.  When you divide 15 by 3 you get a
-  remainder of 0, so $1111$ is not in the language.
-
-  Hint: if you have a binary string, such as $1100_b$, which is
-  $12$ in decimal, what happens if you add a 0 to the right end?
-  You get $11000_b$ which in decimal is $24$.  What happens if
-  you add a 1 to the right end?  You get $11001_b$ which is decimal
-  $25$. 
-
-  DFA:
+\item Use the pumping lemma to show that the following language is not
+  regular.  For examples, 00110000, 0111000 and 00 are in the
+  language, but 110 is not.
+  \[ L = \{0^i1^j0^{i+j} \mid i,j\in\mathbb{N} \} \]
     
 
 
