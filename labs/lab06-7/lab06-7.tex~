@@ -1,0 +1,93 @@
+\documentclass{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{multicol}
+\usepackage{fancyvrb}
+\usepackage{hyperref}
+
+\begin{document}
+
+
+\begin{center}
+{\large Labs \#4 and \#5, CSCI 301}
+
+{\bf Fall, 2013}
+
+\end{center}
+\begin{description}
+\item[Due dates:]  \begin{itemize}\item
+Lab \#4 must be submitted to Canvas before midnight
+  Friday, October 25.
+\item Lab \#5 must be submitted to Canvas before midnight
+  Friday, November 1.
+\end{itemize}
+
+\item[Overall Problem:]
+These labs are taken from an exercise found in another
+online scheme book: \url{http://www.eecs.berkeley.edu/~bh/ss-toc2.html}.
+Both of them together will create a 
+procedure {\tt number-name} that takes a positive integer argument
+and returns a sentence containing that number spelled out in words.
+You do not have to worry about negative numbers, nor about the ``and''
+that some people throw in before the last bunch.
+\begin{Verbatim}[frame=single]
+> (number-name 5513345)
+(five million five hundred thirteen thousand three hundred forty five)
+> (number-name (factorial 20))
+(two quintillion four hundred thirty two quadrillion nine hundred two
+ trillion eight billion one hundred seventy six million six hundred
+ forty thousand)
+> (number-name 0)
+'(zero)
+\end{Verbatim}
+
+
+\item[Lab \#4:]  For the first part of this problem, 
+  write an intermediate version of the solution, that behaves like this:
+\begin{Verbatim}[frame=single]
+> (number-name 1234567890)
+'(1 billion 234 million 567 thousand 890)
+> (number-name 1000000)
+'(1 million)
+> (number-name 1000000001)
+'(1 billion 1)
+> (number-name 2423000000000000002344)
+'(2 sextillion 423 quintillion 2 thousand 344)
+> (number-name 0)
+'()
+\end{Verbatim}
+You will have to write a procedure to break up a big number into its
+three-digit pieces (use {\tt quotient} and {\tt remainder}).
+Note that if any slot is a zero, both it and its name are omitted.
+
+\item[Lab \#5:]  
+\begin{multicols}{2} This lab has two parts.
+First, write a procedure {\tt name<1000} that converts a
+  number less than 1000 into words, as shown at right.
+Note that {\tt zero} only shows up if the whole number is zero. 
+
+Second, put this together with the solution to lab \#4, and you should
+solve the whole problem, with behavior as in the first box, above.
+
+As a final wrinkle, note that {\tt zero} only shows up if the entire
+number is zero.  We never say, for example, ``one million zero
+thousands two,'' we just say ``one million two.''  
+
+\vfill
+
+\columnbreak
+\begin{Verbatim}[frame=single]
+> (name<1000 100)
+'(one hundred)
+> (name<1000 101)
+'(one hundred one)
+> (name<1000 15)
+'(fifteen)
+> (name<1000 111)
+'(one hundred eleven)
+> (name<1000 222)
+'(two hundred twenty two)
+\end{Verbatim}
+\end{multicols}
+\end{description}
+
+\end{document}
