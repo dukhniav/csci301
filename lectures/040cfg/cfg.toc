@@ -24,7 +24,7 @@
 \beamer@sectionintoc {22}{Consequences of Greibach Normal Form}{25}{0}{22}
 \beamer@sectionintoc {23}{Pumping Lemma for CF Languages}{26}{0}{23}
 \beamer@sectionintoc {24}{Pumping Lemma for CF Languages}{27}{0}{24}
-\beamer@sectionintoc {25}{Proof that $L = a^nb^nc^n$ is not CF}{28}{0}{25}
+\beamer@sectionintoc {25}{Proof that $L = 0^n1^n0^n$ is not CF}{28}{0}{25}
 \beamer@sectionintoc {26}{Pumping Lemma exercises (some are hard)}{29}{0}{26}
 \beamer@sectionintoc {27}{CF Languages are closed under union, product, and closure}{30}{0}{27}
 \beamer@sectionintoc {28}{CF languages are NOT closed under complement}{31}{0}{28}
