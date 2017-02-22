@@ -619,7 +619,7 @@ such that any string $s$ in $L$ with $|s|\geq p$ can be written as
 \[
 s = abcde
 \]
-with substrings $a$, $b$, $c$, $d$, $e$,  such that
+with substrings $a,b,c,d,e\in (V\cup\Sigma)^*$,  such that
 \begin{enumerate}
 \item $|bcd| \leq p$
 \item $|bd| \geq 1$
@@ -629,21 +629,21 @@ with substrings $a$, $b$, $c$, $d$, $e$,  such that
 
 \end{frame}
 
-\sect{Proof that $L = 0^n1^n0^n$ is not CF}
+\sect{Proof that $L = 0^n1^n2^n$ is not CF}
 \bi
 \li Suppose $L$ is CF, then $p$ exists as in the theorem.
-\li $0^p1^p0^p \in L$ by definition.
+\li $0^p1^p2^p \in L$ by definition.
 \li From theorem, $0^p1^p0^p = abcde$ and $ab^ncd^ne \in L$ for all $n$, 
 but we don't know which parts are where.
-\li Case 1: $b$ or $d$ contains two different letters.
+\li Case 1: $b$ or $d$ contains two different digits.
 \bi
-\li Then $ab^2cd^2e$ must have letters out of alphabetical order.
+\li Then $ab^2cd^2e$ must have letters out of numerical order.
 \li Then $ab^2cd^2e \not \in L$, contradiction.
 \ei
-\li Case 2: $b$ and $d$ each contain only one kind of letter. 
+\li Case 2: $b$ and $d$ each contain only one kind of digit.
 \bi 
 \li Then  $ab^2cd^2e$ contains more of 1 or 2 kinds of
-letter, not all three.
+digit, not all three.
 \li Then $ab^2cd^2e \not \in L$, contradiction.
 \ei
 \ei
@@ -654,10 +654,10 @@ Show that each of the following languages is not CF.
 \bi
 \li $1^n$ where $n$ is prime
 \li $1^m$ where $m=n^2$
-\li $1^\ell 0^m1^n$ where $\ell < m < n$
-\li $1^n0^n1^i$ where $i \leq n$
+\li $0^\ell 1^m2^n$ where $\ell < m < n$
+\li $0^n1^n2^i$ where $i \leq n$
 \li $ww$ where $w\in (0 + 1)^*$
-\li $1^n0^n1^n$
+\li $0^n1^n2^n$
 \ei
 \end{frame}
 

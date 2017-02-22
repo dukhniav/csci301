@@ -22,7 +22,7 @@
 \BOOKMARK [2][]{Outline0.22}{Consequences of Greibach Normal Form}{}% 22
 \BOOKMARK [2][]{Outline0.23}{Pumping Lemma for CF Languages}{}% 23
 \BOOKMARK [2][]{Outline0.24}{Pumping Lemma for CF Languages}{}% 24
-\BOOKMARK [2][]{Outline0.25}{Proof that L = 0n1n0n is not CF}{}% 25
+\BOOKMARK [2][]{Outline0.25}{Proof that L = 0n1n2n is not CF}{}% 25
 \BOOKMARK [2][]{Outline0.26}{Pumping Lemma exercises \(some are hard\)}{}% 26
 \BOOKMARK [2][]{Outline0.27}{CF Languages are closed under union, product, and closure}{}% 27
 \BOOKMARK [2][]{Outline0.28}{CF languages are NOT closed under complement}{}% 28

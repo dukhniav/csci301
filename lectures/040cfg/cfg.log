@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.31)  21 FEB 2017 08:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.31)  22 FEB 2017 08:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1316,7 +1316,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 708.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 708.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 708.
 Package rerunfilecheck Info: File `cfg.out' has not changed.
-(rerunfilecheck)             Checksum: A83CC39CCB915B64FE906930DACADC88;2111.
+(rerunfilecheck)             Checksum: 244DC29AA92AEAB59B8A049A97425D79;2111.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1353,7 +1353,7 @@ e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on cfg.pdf (33 pages, 242112 bytes).
+Output written on cfg.pdf (33 pages, 242559 bytes).
 PDF statistics:
  1086 PDF objects out of 1200 (max. 8388607)
  1014 compressed objects within 11 object streams
