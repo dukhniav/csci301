@@ -1,0 +1,78 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{tikz,tikz-qtree}
+
+\title{CSCI 301, Winter 2017\\Math Exercises \# 5}
+\author{YOUR NAME HERE}
+\date{Due date: }
+
+\begin{document}
+\maketitle
+
+Construct a context-free grammar for each of the languages
+in questions \ref{cfgbegin} to \ref{cfgend}.
+\begin{enumerate}
+\item \label{cfgbegin}
+$\{0^{2n}1^{n} : n \geq 0\}$
+
+\item $\{w : w \mbox{ containst at least three 1s}\}$
+
+
+\item $\{w : \mbox{the length of $w$ is odd and its middle symbol is 0}\}$
+
+\item $\{w : w \mbox{ is a palindrome}\}$
+
+\item $\{w : w \mbox{ starts and ends with the same symbol}\}$
+
+\item  $\{w : w \mbox{ starts and ends with different symbols}\}$
+
+
+\item \label{cfgend}
+$\{a^mb^n : 0 \leq m \leq n \leq 2m\}$
+
+\item Let $G$ be the grammar:
+\begin{eqnarray*}
+S &\rightarrow& aB \mid bA \\
+A &\rightarrow& a \mid aS \mid bAA \\
+B &\rightarrow& b \mid bS \mid aBB
+\end{eqnarray*}
+For the string $aaabbabbba$, find a
+
+\begin{enumerate}
+\item leftmost derivation,
+
+\item rightmost derivation,
+
+\item parse tree.
+
+\end{enumerate}
+
+\item Convert the following grammar to Chomsky normal form:
+\begin{eqnarray*}
+S &\rightarrow& bA \mid aB\\
+A &\rightarrow& bAA \mid aS \mid a\\
+B &\rightarrow& aBB \mid bS \mid b
+\end{eqnarray*}
+Follow the steps documented in my notes
+and the text, and show the resulting grammar
+after each step.
+
+\begin{description}
+\item[Step 1] Eliminate the start variable from the right-hand side of
+  rules. 
+
+\item[Step 2] Eliminate $\epsilon$-rules.  
+
+\item[Step 3] Eliminate unit-rules.
+  
+\item[Step 4] Eliminate all rules having more than two symbols on the
+  right-hand side.
+
+\item[Step 5] Eliminate all rules of the form $A\rightarrow u_1u_2$
+  where $u_1$ and $u_2$ are not both variables.
+
+\end{description}
+\end{enumerate}
+\end{document}
