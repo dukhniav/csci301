@@ -131,6 +131,47 @@ such that for every string $w\in\Sigma^*$:
 \end{enumerate}
 \end{frame}
 
+
+\bfr{Enumerability}
+
+A language $A$ over $\Sigma$
+is {\em enumerable} if there exists a Turing machine $M$
+such that for every string $w\in\Sigma^*$:
+\begin{enumerate}
+\item If $w\in A$ then $M$, started on $w$, halts in the accept state.
+\item If $w\not\in A$ then $M$, started on $w$, either halts in the
+  reject state or loops forever.
+\end{enumerate}
+\end{frame}
+
+\bfr{Why do we call it enumerable?}
+\begin{itemize}
+\item If we can enumerate the elements with an algorithm, then we can
+  create an algorithm to correctly identify elements of the set.
+  \begin{itemize}\item How? \pause \end{itemize}
+  \item If we can correctly identify elements of the set, then we can
+    build an algorithm to enumerate them.
+  \begin{itemize}\item How? \end{itemize}
+\end{itemize}
+\end{frame}
+
+\bfr{Decidable {\em vs.} enumerable}
+\begin{itemize}
+\item {\bf Decidable} is also called
+  \begin{itemize}
+  \item {\bf computable}
+  \item {\bf recursive}
+  \end{itemize}
+  
+\item {\bf Enumerable} is also called
+  \begin{itemize}
+  \item {\bf semi-decidable}
+  \item {\bf  recognizable}
+  \item {\bf recursively enumerable}
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
 \bfr{Describing machines and problems as strings}
 \begin{itemize}
 \item We assume any machine (DFA, PDA, TM) can be described by a
@@ -230,18 +271,26 @@ Proof?\pause\ By contradiction.
   \fbox{
     \parbox{3in}{
       $D$: On input $\langle M\rangle$:
-      \begin{description}
-      \item[Step 1:] Run $H$ on $\langle M, \langle M \rangle\rangle$.
-      \item[Step 2:] If $H$ accepts, reject, else accept.
-      \end{description}
+      \begin{itemize}
+      \item Run $H$ on $\langle M, \langle M \rangle\rangle$.
+      \item If $H$ accepts, reject, else accept.
+      \end{itemize}
     }
   }
 }
 \item If $H$ accepts $\langle D, \langle D \rangle\rangle$, then
   $D$ rejects $\langle D \rangle$.
+  \begin{itemize}
+    \item Therefore, by definition $\langle D, \langle D
+      \rangle\rangle \not\in A_{TM}$.
+  \end{itemize}
 \item If $H$ rejects $\langle D, \langle D \rangle\rangle$, then
   $D$ accepts $\langle D \rangle$.
-\item $H$ does not recognize $A_{TM}$.
+  \begin{itemize}
+    \item Therefore, by definition $\langle D, \langle D
+      \rangle\rangle \in A_{TM}$.
+  \end{itemize}
+\item In either case, $H$ does not decide $A_{TM}$.
 \end{itemize}
 
 \end{frame}
@@ -274,6 +323,32 @@ Proof?\pause\ By contradiction.
 \end{frame}
 
 
+\bfr{The language $A_{TM}$ is enumerable but not decidable.}
+\[
+A_{TM} = \{ \langle M,w\rangle : \mbox{$M$ is a TM that accepts $w$}\}
+\]
+
+Proof?
+\end{frame}
+
+
+\bfr{Hilbert's 10th problem is enumerable but not decidable}
+\begin{eqnarray*}
+Hilbert = \{\langle p \rangle &:& \mbox{$p$ is a polynomial with integer
+  coefficients}\\ &&\mbox{that has an integral root}\}
+\end{eqnarray*}
+
+\vfill
+
+\[
+15x^3y^2 + 12xy^2z^3 - 17x^9y^2z = 0
+\]
+\vfill
+
+\hfill\includegraphics[scale=0.25]{Hilbert.jpg}
+\end{frame}
+
+
 
 \bfr{The language $Halt$ is not decidable.}
 \[
@@ -289,9 +364,9 @@ language.  Construct the following TM, $Q$:
   \fbox{
     \parbox{3in}{
       $Q$: On input $\langle M\rangle$:
-      \begin{description}
-      \item While $H(\langle M,\langle M \rangle \rangle)$ do endwhile
-      \end{description}
+      \begin{itemize}
+      \item while $H(\langle M,\langle M \rangle \rangle)$ do end;
+      \end{itemize}
     }
   }
 }
@@ -330,12 +405,11 @@ By contradiction.
           \end{itemize}
         }
       }
-    \item Run $A$ on $D$.
+    \item Run $A$ on $D$.  If it accepts, accept, else reject.
     \end{itemize}
   }}\pause
   \item $\mathcal{L}(D) = \{a\}$ iff $M$ halts on $w$.\pause
-  \item $H$ decides the language $Halt$.
-\item But that's impossible!
+  \item $H$ decides the language $Halt$. But that's impossible!
 \end{itemize}
 
 
@@ -359,55 +433,16 @@ Then $\mathcal{P}$ is undecidable.
 \bfr{Rice's Theorem Examples}
 \begin{enumerate}
   \item $\{\langle M\rangle\mid \mbox{$M$ accepts only inputs in the language $a^*b^*$}\}$
-\item  $\{\langle M\rangle\mid \mbox{$M$ accepts input of length $n^2$}\}$
-\item  $\{\langle M\rangle\mid \mbox{$M$ accepts input of length $k$}\}$
-\item $\{\langle M\rangle\mid \mbox{$M$ accepts $\epsilon$}\}$
+\item  $\{\langle M\rangle\mid \mbox{$M$ accepts only input of length $n^2$}\}$
+\item  $\{\langle M\rangle\mid \mbox{$M$ accepts only input of length $k$}\}$
 \item $\{\langle  M\rangle\mid \mbox{$M$ accepts all inputs}\}$
 \item $\{\langle  M\rangle\mid \mbox{$M$ does not accept all inputs}\}$
 \item $\{\langle  M\rangle\mid \mbox{$M$ accepts some input}\}$
 \item $\{\langle  M\rangle\mid \mbox{$M$ does not accept any input}\}$
 \end{enumerate}
 
-None of these is decideable, or even enumerable.
-\end{frame}
+None of these is decideable.
 
-
-
-\bfr{Enumerability}
-
-A language $A$ over $\Sigma$
-is {\em enumerable} if there exists a Turing machine $M$
-such that for every string $w\in\Sigma^*$:
-\begin{enumerate}
-\item If $w\in A$ then $M$, started on $w$, halts in the accept state.
-\item If $w\not\in A$ then $M$, started on $w$, either halts in the
-  reject state or loops forever.
-\end{enumerate}
-\end{frame}
-
-\bfr{Hilbert's problem is enumerable but not decidable}
-\begin{eqnarray*}
-Hilbert = \{\langle p \rangle &:& \mbox{$p$ is a polynomial with integer
-  coefficients}\\ &&\mbox{that has an integral root}\}
-\end{eqnarray*}
-\end{frame}
-
-
-\bfr{The language $A_{TM}$ is enumerable but not decidable.}
-\[
-A_{TM} = \{ \langle M,w\rangle : \mbox{$M$ is a TM that accepts $w$}\}
-\]
-
-Proof?
-\end{frame}
-
-\bfr{Why do we call it enumerable?}
-\begin{itemize}
-\item If we can enumerate the elements with an algorithm, then we can
-  create an algorithm to correctly identify elements of the set.
-  \item If we can correctly identify elements of the set, then we can
-    build an algorithm to enumerate them.
-\end{itemize}
 \end{frame}
 
 \bfr{Busy beavers are not enumerable}
