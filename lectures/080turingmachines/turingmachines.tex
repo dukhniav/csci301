@@ -267,9 +267,9 @@ Proof?\pause\ By contradiction.
 \]}}
 
 \item
-Machine $D$ uses $H$ to give the opposite answer on the diagonal.
+ $D$ uses $H$ to give the opposite answer on the diagonal.
 \item
-  Machine $H$ must give the wrong answer somewhere on machine $D$.
+ $H$ must give the wrong answer somewhere on machine $D$.
   \end{itemize}
 \end{frame}
 
@@ -305,6 +305,45 @@ terminates iff   $Q(\langle Q\rangle) $ does not terminate.
 \end{itemize}
 \end{frame}
 
+\bfr{The language $M_a$ is not decidable.}
+\[
+M_a = \{\langle M \rangle \mid \mathcal{L}(M) = \{a\}\}
+\]
+
+Proof?\pause
+
+By contradiction.
+\begin{itemize}
+\item Suppose TM $A$ decides $M_a$.
+\item Construct the following TM, $H$:
+  \fbox{
+    \parbox{3in}{
+  $H$: On input $\langle M, w\rangle$:
+      \begin{itemize}
+    \item Construct TM $D$:
+      \fbox{
+        \parbox{2in}{
+          $D$: On input $\langle s \rangle$:
+          \begin{itemize}
+          \item Run $M$ on $w$.
+          \item If $s=a$ accept, else reject.
+          \end{itemize}
+        }
+      }
+    \item Run $A$ on $D$.
+    \end{itemize}
+  }}\pause
+  \item $\mathcal{L}(D) = \{a\}$ iff $M$ halts on $w$.\pause
+  \item $H$ decides the language $Halt$.
+\item But that's impossible!
+\end{itemize}
+
+
+
+\end{frame}
+
+
+
 \bfr{Rice's Theorem}
 Let $\mathcal{T}$ be the set of all binary encoded TMs.
 
@@ -316,6 +355,23 @@ Let $\mathcal{P}$ be a subset of $\mathcal{T}$ such that
 \end{enumerate}
 Then $\mathcal{P}$ is undecidable.
 \end{frame}
+
+\bfr{Rice's Theorem Examples}
+\begin{enumerate}
+  \item $\{\langle M\rangle\mid \mbox{$M$ accepts only inputs in the language $a^*b^*$}\}$
+\item  $\{\langle M\rangle\mid \mbox{$M$ accepts input of length $n^2$}\}$
+\item  $\{\langle M\rangle\mid \mbox{$M$ accepts input of length $k$}\}$
+\item $\{\langle M\rangle\mid \mbox{$M$ accepts $\epsilon$}\}$
+\item $\{\langle  M\rangle\mid \mbox{$M$ accepts all inputs}\}$
+\item $\{\langle  M\rangle\mid \mbox{$M$ does not accept all inputs}\}$
+\item $\{\langle  M\rangle\mid \mbox{$M$ accepts some input}\}$
+\item $\{\langle  M\rangle\mid \mbox{$M$ does not accept any input}\}$
+\end{enumerate}
+
+None of these is decideable, or even enumerable.
+\end{frame}
+
+
 
 \bfr{Enumerability}
 
