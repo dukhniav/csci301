@@ -1,29 +1,18 @@
-\frametitle{ A Quine Turing Machine }
-\begin{itemize}
-\item Consider the TM $B$:
-  \fbox{\parbox{3in}{
-    $B$: on input $\langle M \rangle$:
-    \begin{itemize}
-    \item Create TM $A$:
-      \fbox{\parbox{2in}{
-        $A$: on input $w$:
-        \begin{itemize}
-        \item Erase $w$
-        \item Write $\langle M \rangle$ on the tape.
-        \item Simulate what's on the tape.
-        \end{itemize}
-      }}
-  \item Write $\langle A\rangle$ on the tape.
-  \end{itemize}
-  }}
-\item Now consider TM $A$:
-      \fbox{\parbox{3in}{
-        $A$: on input $w$:
-        \begin{itemize}
-        \item Erase $w$
-        \item Write $\langle B \rangle$ on the tape.
-        \item Simulate what's on the tape.
-        \end{itemize}
-      }}
+\frametitle{ Recursion theorem makes undecidability easier to prove }
+\[
+Halt = \{ \langle M,w\rangle : \mbox{$M$ is a TM that terminates on $w$}\}
+\]
 
-  \end{itemize}
+Assume there is a TM $H$ that decides this language.
+
+Construct the following TM $Q$:
+
+\centerline{\fbox{\parbox{3in}{
+    $Q$ : On input $w$:
+    \begin{itemize}
+      \item Obtain description of self, $\langle Q \rangle$.
+      \item Run $H$ on $\langle Q, w\rangle$.
+      \item If $H$ accepts, loop forever, else halt.
+    \end{itemize}
+}}}
+
