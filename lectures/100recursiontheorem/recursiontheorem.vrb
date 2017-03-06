@@ -1,0 +1,29 @@
+\frametitle{ A Quine Turing Machine }
+\begin{itemize}
+\item Consider the TM $B$:
+  \fbox{\parbox{3in}{
+    $B$: on input $\langle M \rangle$:
+    \begin{itemize}
+    \item Create TM $A$:
+      \fbox{\parbox{2in}{
+        $A$: on input $w$:
+        \begin{itemize}
+        \item Erase $w$
+        \item Write $\langle M \rangle$ on the tape.
+        \item Simulate what's on the tape.
+        \end{itemize}
+      }}
+  \item Write $\langle A\rangle$ on the tape.
+  \end{itemize}
+  }}
+\item Now consider TM $A$:
+      \fbox{\parbox{3in}{
+        $A$: on input $w$:
+        \begin{itemize}
+        \item Erase $w$
+        \item Write $\langle B \rangle$ on the tape.
+        \item Simulate what's on the tape.
+        \end{itemize}
+      }}
+
+  \end{itemize}
